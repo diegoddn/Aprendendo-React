@@ -1,9 +1,9 @@
-const CardProduto = () => {
+const CardProduto = ({ produtoCadastrado, descricao, preco }) => {
   return (
     <div>
-      <h1>PC Gamer</h1>
-      <h2>Computador para trabalho, estudos e jogos</h2>
-      <p>R$ 6.000,00</p>
+      <h1>{produtoCadastrado}</h1>
+      <h2>{descricao}</h2>
+      <p>R$ {preco}</p>
       <button>Comprar</button>
     </div>
   );
