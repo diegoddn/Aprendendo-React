@@ -1,9 +1,11 @@
+import { MainDescription, MainPrice, MainTitle } from "../App";
+
 const CardProduto = ({ produtoCadastrado, descricao, preco }) => {
   return (
     <div>
-      <h1>{produtoCadastrado}</h1>
-      <h2>{descricao}</h2>
-      <p>R$ {preco}</p>
+      <MainTitle>{produtoCadastrado}</MainTitle>
+      <MainDescription>{descricao}</MainDescription>
+      <MainPrice>R$ {preco}</MainPrice>
       <button>Comprar</button>
     </div>
   );
