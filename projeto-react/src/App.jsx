@@ -4,11 +4,6 @@ function App() {
   return (
     <div>
       <CardProduto />
-      <CardProduto />
-      <CardProduto />
-      <CardProduto />
-      <CardProduto />
-      <CardProduto />
     </div>
   );
 }
