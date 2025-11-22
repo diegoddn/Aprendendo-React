@@ -1,20 +1,41 @@
 import { useState } from "react";
 
 function App() {
-  const [valor, setValor] = useState(0);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
 
-  const incrementarNumero = () => {
-    setValor(valor + 1);
+  const handleNome = (event) => {
+    setNome(event.target.value);
   };
-  const decrementarNumero = () => {
-    setValor(valor - 1);
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
   };
+
+  const handleSenha = (event) => {
+    setSenha(event.target.value);
+  };
+
+  function enviarInformacoes(event) {
+    event.preventDefault();
+    console.log(nome, email, senha);
+  }
 
   return (
     <div>
-      <p>O numero é {valor}</p>
-      <button onClick={incrementarNumero}>Incrementar</button>
-      <button onClick={decrementarNumero}>Decrementar</button>
+      <form onSubmit={enviarInformacoes}>
+        <label>Nome:</label>
+        <input type="text" value={nome} onChange={handleNome} />
+
+        <label>Email:</label>
+        <input type="email" value={email} onChange={handleEmail} />
+
+        <label>Senha:</label>
+        <input type="password" value={senha} onChange={handleSenha} />
+
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   );
 }
